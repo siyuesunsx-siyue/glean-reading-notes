@@ -1,0 +1,14 @@
+{
+  "name": "glean-reading",
+  "version": "0.3.7",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/core.test.cjs tests/sync.test.cjs tests/dedao-bridge.test.cjs",
+    "check": "node scripts/check.mjs",
+    "package": "node scripts/package.mjs"
+  },
+  "dependencies": {
+    "pdfjs-dist": "6.3.289"
+  }
+}

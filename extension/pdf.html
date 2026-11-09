@@ -1,0 +1,5 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>札记 PDF 阅读</title>
+<link rel="stylesheet" href="vendor/pdfjs/pdf_viewer.css"><link rel="stylesheet" href="pdf.css">
+<header><strong>札记 · PDF</strong><button id="load">打开此 PDF</button><label class="file">打开本地 PDF<input id="file" type="file" accept="application/pdf,.pdf"></label><button id="prev" disabled>上一页</button><input id="page" aria-label="页码" type="number" min="1" value="1"><span id="total"></span><button id="next" disabled>下一页</button><select id="zoom" aria-label="缩放"><option value="1">100%</option><option value="1.3" selected>130%</option><option value="1.6">160%</option></select></header>
+<p id="status" role="status">正在准备 PDF。打开后，选中文字即可记录。</p><main id="pages"><div class="pdf-page"><canvas></canvas><div class="textLayer"></div></div></main>
+<script src="core.js"></script><script src="store.js"></script><script src="pdf-source.js"></script><script src="content.js"></script><script type="module" src="pdf-reader.mjs"></script></html>

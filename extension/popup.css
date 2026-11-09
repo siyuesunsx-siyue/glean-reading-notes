@@ -1,0 +1,78 @@
+body {
+  width: 275px;
+  padding: 18px;
+  margin: 0;
+  font:
+    13px/1.6 "Segoe UI",
+    "Microsoft YaHei",
+    sans-serif;
+  color: #33445f;
+  background: #fff;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 19px;
+}
+.mark {
+  background: #315baf;
+  color: white;
+  font-family: serif;
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 3px 10px;
+}
+strong {
+  font-size: 17px;
+}
+p {
+  font-size: 11px;
+  color: #8996a8;
+  margin: 3px 0;
+}
+button {
+  font: inherit;
+  border: 1px solid #e6ebf3;
+  border-radius: 8px;
+  background: #fff;
+  color: #435776;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 13px;
+  width: 100%;
+  margin: 7px 0;
+  cursor: pointer;
+}
+button:hover {
+  background: #edf4ff;
+  border-color: #d4e2fc;
+}
+#pause {
+  border-color: #c8dafa;
+  background: #f4f8ff;
+  color: #315baf;
+  font-weight: 600;
+}
+#pause.paused {
+  border-color: #f1d3a4;
+  background: #fff8ec;
+  color: #9a6a25;
+}
+#pause.paused span {
+  font-size: 0;
+}
+#pause.paused span::after {
+  content: "▶";
+  font-size: 12px;
+}
+#access {
+  border-color: #c8dafa;
+  background: #f4f8ff;
+  color: #315baf;
+  font-weight: 600;
+}
+#status {
+  margin-top: 14px;
+  line-height: 1.8;
+}

@@ -1,0 +1,11 @@
+node_modules/
+output/
+.playwright-cli/
+.local/
+.tmp-feishu-auth.png
+
+# Local pairing credentials and machine-specific extension installs.
+dist/
+dist/glean-0.2.1/
+dist/glean-0.3.7-company-sync-kit/
+**/local-sync-config.js

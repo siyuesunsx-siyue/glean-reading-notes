@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "札记 Glean · 阅读与灵感",
+  "version": "0.3.7",
+  "description": "轻轻划下，慢慢拾起。保存网页摘录、想法和灵感，找回阅读中的收获。",
+  "permissions": ["storage", "activeTab", "scripting", "alarms"],
+  "host_permissions": ["http://127.0.0.1/*", "http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "札记 Glean"
+  },
+  "options_page": "app.html#settings",
+  "content_scripts": [
+    {
+      "matches": ["https://dedao.cn/*", "https://*.dedao.cn/*"],
+      "js": ["dedao-selection.js"],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*", "file:///*"],
+      "js": ["core.js", "store.js", "frame-selection.js", "content.js"],
+      "all_frames": true,
+      "match_origin_as_fallback": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
